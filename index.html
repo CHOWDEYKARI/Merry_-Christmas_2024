@@ -139,6 +139,52 @@
             z-index: 3;
             pointer-events: none;
         }
+
+        /* start */
+
+/* Ensure the images scale and maintain aspect ratio */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Adjust font sizes for smaller screens */
+@media (max-width: 768px) {
+    .wish {
+        font-size: 2rem;  /* Reduce size on tablets */
+    }
+    .tree, .santa-claus {
+        height: 200px;   /* Adjust image size for tablets */
+        width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .wish {
+        font-size: 1.5rem; /* Further reduce size for mobile */
+    }
+    .tree, .santa-claus {
+        height: 150px;   /* Adjust image size for mobile */
+        width: 150px;
+    }
+}
+
+/* Ensure the bottom container stacks elements vertically on small screens */
+@media (max-width: 600px) {
+    .bottom-container {
+        flex-direction: column;
+    }
+    .tree, .santa-claus {
+        margin: 10px 0;  /* Add space between stacked images */
+    }
+}
+
+/* Prevent overflow in smaller screens */
+body {
+    overflow: auto;  /* Allow scrolling if content exceeds viewport */
+}
+
+        /* end */
     </style>
 </head>
 <body>
